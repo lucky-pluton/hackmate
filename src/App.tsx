@@ -6,6 +6,7 @@ import { DashboardView } from './components/dashboard/DashboardView';
 import { OpportunityCard } from './components/opportunities/OpportunityCard';
 import { OpportunityFilters } from './components/opportunities/OpportunityFilters';
 import { OpportunityDetailModal } from './components/opportunities/OpportunityDetailModal';
+import { WhatIfSimulatorModal } from './components/opportunities/WhatIfSimulatorModal';
 import { ConversationalOnboarding } from './components/onboarding/ConversationalOnboarding';
 import { AiAssistantDrawer } from './components/assistant/AiAssistantDrawer';
 import { ApplicationTracker } from './components/tracker/ApplicationTracker';
@@ -24,6 +25,7 @@ export function App() {
   const [currentView, setCurrentView] = useState<string>('dashboard');
   const [selectedOpportunity, setSelectedOpportunity] = useState<Opportunity | null>(null);
   const [isAssistantOpen, setIsAssistantOpen] = useState<boolean>(false);
+  const [isSimulatorOpen, setIsSimulatorOpen] = useState<boolean>(false);
 
   // If user hasn't completed conversational onboarding
   if (!isOnboarded) {
@@ -69,6 +71,15 @@ export function App() {
                 Every opportunity evaluated deterministically against your qualifications and constraints
               </p>
             </div>
+
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setIsSimulatorOpen(true)}
+              icon={<Sparkles className="w-4 h-4 text-indigo-600" />}
+            >
+              "What-If" Simulator
+            </Button>
           </div>
 
           <OpportunityFilters />
@@ -163,6 +174,16 @@ export function App() {
       <OpportunityDetailModal
         opportunity={selectedOpportunity}
         onClose={() => setSelectedOpportunity(null)}
+      />
+
+      {/* What-If Simulator Modal */}
+      <WhatIfSimulatorModal
+        isOpen={isSimulatorOpen}
+        onClose={() => setIsSimulatorOpen(false)}
+        onSelectOpportunity={(opp) => {
+          setSelectedOpportunity(opp);
+          setIsSimulatorOpen(false);
+        }}
       />
 
       {/* AI Assistant Drawer */}
