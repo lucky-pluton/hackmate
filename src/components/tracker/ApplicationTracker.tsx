@@ -264,3 +264,4 @@ export const ApplicationTracker: React.FC<ApplicationTrackerProps> = ({
     </div>
   );
 };
+

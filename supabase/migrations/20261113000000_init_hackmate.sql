@@ -260,3 +260,4 @@ CREATE POLICY "Anyone can view eligibility criteria" ON public.eligibility_crite
 
 CREATE POLICY "Anyone can view opportunity sources" ON public.opportunity_sources
     FOR SELECT USING (true);
+

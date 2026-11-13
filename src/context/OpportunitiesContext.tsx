@@ -297,3 +297,4 @@ export const useOpportunities = () => {
   if (!context) throw new Error('useOpportunities must be used within an OpportunitiesProvider');
   return context;
 };
+

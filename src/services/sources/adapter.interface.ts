@@ -18,3 +18,4 @@ export interface OpportunitySourceAdapter {
   fetchOpportunities(): Promise<Opportunity[]>;
   parseRawData?(rawData: any): Opportunity[];
 }
+

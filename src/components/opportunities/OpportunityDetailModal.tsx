@@ -343,3 +343,4 @@ export const OpportunityDetailModal: React.FC<OpportunityDetailModalProps> = ({
     </Modal>
   );
 };
+

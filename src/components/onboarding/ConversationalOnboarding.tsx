@@ -448,3 +448,4 @@ export const ConversationalOnboarding: React.FC<{ onComplete: () => void }> = ({
     </div>
   );
 };
+

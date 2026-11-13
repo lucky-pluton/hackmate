@@ -756,3 +756,4 @@ export const HackalendarAdapter: OpportunitySourceAdapter = {
     ];
   }
 };
+

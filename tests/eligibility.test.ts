@@ -169,3 +169,4 @@ describe('EligibilityEngine — Rule-based and Deterministic Evaluation', () => 
     expect(match.score).toBeLessThanOrEqual(25);
   });
 });
+

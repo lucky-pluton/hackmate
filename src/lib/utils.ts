@@ -173,3 +173,4 @@ export function downloadIcsFile(filename: string, icsContent: string) {
   link.click();
   document.body.removeChild(link);
 }
+

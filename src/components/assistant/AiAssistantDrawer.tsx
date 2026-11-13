@@ -289,3 +289,4 @@ export const AiAssistantDrawer: React.FC<AiAssistantDrawerProps> = ({
     </div>
   );
 };
+

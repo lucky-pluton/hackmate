@@ -428,3 +428,4 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onSelectOpportun
     </div>
   );
 };
+

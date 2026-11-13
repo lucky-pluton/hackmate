@@ -93,3 +93,4 @@ export const DashboardMetrics: React.FC<DashboardMetricsProps> = ({ onNavigate }
     </div>
   );
 };
+

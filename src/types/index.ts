@@ -228,3 +228,4 @@ export interface ChatMessage {
   actionPayload?: any;
   suggestions?: string[];
 }
+
